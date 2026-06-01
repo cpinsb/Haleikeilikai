@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hale ʻIke Ilikai — Oceanfront Waikiki Condo Rental</title>
+<meta name="description" content="Hale ʻIke Ilikai — a newly renovated 15th-floor oceanfront corner condo at the Ilikai Marina in Waikiki, with 180° views from every room. Rated 4.76★ by 150+ guests.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ocean:#0a4a5e;
+    --ocean-deep:#06303d;
+    --teal:#198ca7;
+    --sand:#f4ece0;
+    --cream:#fbf7f1;
+    --coral:#e07a5f;
+    --ink:#1f2d33;
+    --muted:#5d6b70;
+    --line:#e3dccf;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-weight:300}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.15;color:var(--ocean-deep)}
+  a{color:inherit}
+  img{display:block;width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:'Jost',sans-serif;text-transform:uppercase;letter-spacing:.28em;font-size:.72rem;font-weight:500;color:var(--teal)}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;background:rgba(251,247,241,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--ocean-deep);letter-spacing:.01em}
+  .navlinks{display:flex;gap:30px;font-size:.82rem;text-transform:uppercase;letter-spacing:.12em}
+  .navlinks a{text-decoration:none;color:var(--muted);transition:color .2s}
+  .navlinks a:hover{color:var(--teal)}
+  .btn{display:inline-block;background:var(--coral);color:#fff;text-decoration:none;padding:13px 26px;border-radius:40px;font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;font-weight:500;transition:transform .2s,background .2s;border:none;cursor:pointer}
+  .btn:hover{background:#c9694f;transform:translateY(-2px)}
+  .btn-sm{display:inline-block;margin-top:14px;background:transparent;color:var(--ocean);text-decoration:none;padding:9px 20px;border:1.5px solid var(--teal);border-radius:30px;font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;font-weight:500;transition:background .2s,color .2s}
+  .btn-sm:hover{background:var(--teal);color:#fff}
+  @media(max-width:760px){.navlinks{display:none}}
+
+  /* HERO */
+  header.hero{position:relative;height:88vh;min-height:560px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+  header.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+  header.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,48,61,.35),rgba(6,48,61,.6));z-index:-1}
+  .hero-inner{max-width:760px;padding:0 24px}
+  .hero-inner .eyebrow{color:#cfe9ef}
+  .hero h1{color:#fff;font-size:clamp(3rem,8vw,5.6rem);margin:.1em 0 .25em;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+  .hero p.tag{font-size:1.15rem;font-weight:300;letter-spacing:.02em;margin-bottom:1.8em;color:#f3efe7}
+  .stars{margin-top:1.4em;font-size:.9rem;letter-spacing:.08em;color:#f3efe7}
+  .stars b{color:#fff}
+
+  /* SECTIONS */
+  section{padding:88px 0}
+  section.alt{background:var(--sand)}
+  .section-head{max-width:720px;margin:0 auto 48px;text-align:center}
+  .section-head h2{font-size:clamp(2rem,4vw,2.9rem);margin:.2em 0}
+  .section-head p{color:var(--muted);font-size:1.05rem}
+  .lead{font-size:1.2rem;color:var(--ink);max-width:760px;margin:0 auto;text-align:center;font-weight:300}
+
+  /* FEATURE STRIP */
+  .features{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:10px}
+  .feature{text-align:center;padding:8px}
+  .feature .ic{font-size:1.8rem;margin-bottom:8px}
+  .feature h3{font-size:1.25rem;margin-bottom:4px}
+  .feature p{font-size:.92rem;color:var(--muted)}
+  @media(max-width:760px){.features{grid-template-columns:repeat(2,1fr)}}
+
+  /* GALLERY */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .gallery .cell{position:relative;overflow:hidden;border-radius:6px;cursor:pointer;aspect-ratio:4/3;background:var(--line)}
+  .gallery .cell img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .gallery .cell:hover img{transform:scale(1.06)}
+  .gallery .cell.tall{grid-row:span 2;aspect-ratio:auto}
+  .gallery .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 10px;color:#fff;font-size:.82rem;letter-spacing:.05em;background:linear-gradient(transparent,rgba(0,0,0,.55));opacity:0;transition:opacity .3s}
+  .gallery .cell:hover .cap{opacity:1}
+  @media(max-width:760px){.gallery{grid-template-columns:repeat(2,1fr)}.gallery .cell.tall{grid-row:auto;aspect-ratio:4/3}}
+
+  /* SPLIT */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .split img{border-radius:8px;box-shadow:0 20px 50px rgba(6,48,61,.16)}
+  .split h2{font-size:2.4rem;margin-bottom:.4em}
+  .split p{color:var(--muted);margin-bottom:1em}
+  @media(max-width:820px){.split{grid-template-columns:1fr;gap:28px}}
+
+  /* TWO COL LISTS */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  @media(max-width:760px){.cols{grid-template-columns:1fr;gap:32px}}
+  .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:32px 34px}
+  .card h3{font-size:1.5rem;margin-bottom:14px;color:var(--ocean)}
+  ul.clean{list-style:none}
+  ul.clean li{padding:7px 0 7px 26px;position:relative;color:var(--ink);border-bottom:1px solid var(--line)}
+  ul.clean li:last-child{border-bottom:none}
+  ul.clean li::before{content:"";position:absolute;left:0;top:15px;width:8px;height:8px;border-radius:50%;background:var(--teal)}
+  ul.clean li b{font-weight:600}
+
+  /* REVIEW BANNER */
+  .review-band{background:var(--ocean-deep);color:#fff;text-align:center}
+  .review-band .big{font-family:'Cormorant Garamond',serif;font-size:4rem;line-height:1;color:#fff}
+  .review-band .sub{letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;color:#bcd9e0;margin-top:6px}
+  .themes{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px}
+  .themes span{border:1px solid rgba(255,255,255,.3);border-radius:30px;padding:8px 18px;font-size:.82rem;letter-spacing:.06em;color:#eaf4f6}
+
+  /* CALENDAR */
+  .cal-wrap{max-width:520px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px 28px}
+  .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+  .cal-head #calTitle{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--ocean-deep)}
+  .cal-head button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--cream);font-size:1.3rem;color:var(--ocean);cursor:pointer;line-height:1;transition:background .2s,border-color .2s}
+  .cal-head button:hover{background:var(--sand);border-color:var(--teal)}
+  .cal-head button:disabled{opacity:.35;cursor:not-allowed}
+  .cal-dow{display:grid;grid-template-columns:repeat(7,1fr);text-align:center;font-size:.72rem;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;margin-bottom:8px}
+  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+  .cal-cell{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;border-radius:7px;font-size:.92rem}
+  .cal-cell.empty{background:transparent}
+  .cal-cell.avail{background:#e9f4ef;color:#1f6b4f;font-weight:500}
+  .cal-cell.booked{background:#f3ece8;color:#c2a99e;text-decoration:line-through}
+  .cal-cell.past{background:transparent;color:#cfcabd}
+  .cal-legend{display:flex;gap:22px;justify-content:center;margin-top:20px;font-size:.82rem;color:var(--muted)}
+  .cal-legend i.dot{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:middle}
+  .cal-legend i.avail{background:#bfe3d2}
+  .cal-legend i.booked{background:#e7d6cd}
+  .cal-note{margin-top:18px;text-align:center;font-size:.86rem;color:var(--muted)}
+  .cal-note a{color:var(--teal)}
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:36px}}
+  form label{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:18px 0 6px}
+  form input,form textarea{width:100%;padding:13px 16px;border:1px solid var(--line);border-radius:8px;font-family:inherit;font-size:1rem;background:#fff;color:var(--ink)}
+  form input:focus,form textarea:focus{outline:none;border-color:var(--teal)}
+  form textarea{min-height:120px;resize:vertical}
+  form .btn{margin-top:24px;width:100%;font-size:.85rem}
+  .contact-aside .eyebrow{margin-bottom:10px}
+  .contact-aside h2{font-size:2.4rem;margin-bottom:.4em}
+  .contact-aside a.email{color:var(--teal);text-decoration:none;font-size:1.15rem;font-weight:500}
+  .contact-aside p{color:var(--muted);margin-bottom:1em}
+
+  /* FOOTER */
+  footer{background:var(--ocean-deep);color:#cfe0e5;text-align:center;padding:46px 24px;font-size:.85rem;letter-spacing:.03em}
+  footer .brand{color:#fff;display:block;margin-bottom:8px}
+  footer .reg{color:#7fa3ad;font-size:.74rem;margin-top:14px;letter-spacing:.05em}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">Hale ʻIke Ilikai</span>
+    <div class="navlinks">
+      <a href="#gallery">Gallery</a>
+      <a href="#space">The Space</a>
+      <a href="#location">Location</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#availability">Availability</a>
+      <a href="#contact">Reserve</a>
+    </div>
+    <a href="#contact" class="btn">Reserve</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <img class="bg" src="Photos/Front%20view.webp" alt="Oceanfront view from the lanai of Hale ʻIke Ilikai">
+  <div class="hero-inner">
+    <span class="eyebrow">E Komo Mai · Oceanfront Waikiki</span>
+    <h1>Hale ʻIke Ilikai</h1>
+    <p class="tag">E komo mai — come stay where the ocean fills every window, the trade winds drift across your lanai, and every Hawaiian sunset is yours alone.</p>
+    <a href="#contact" class="btn">Begin Your Aloha</a>
+    <div class="stars">★ <b>4.76</b> · Loved by 150+ guests</div>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">E Komo Mai · Welcome</span>
+      <h2>Wake up to the water, breathe in the aloha</h2>
+    </div>
+    <p class="lead">From the moment you open the door, the ocean greets you. This 15th-floor corner hale at the Ilikai Marina wraps you in a sweeping 180-degree view — from the turquoise Hilton Hawaiian Village Lagoon out to Magic Island and the twinkling lights of downtown Honolulu — with the Yacht Harbor shimmering just 30 feet below. Feel the trade winds drift across your lanai as each evening melts into a golden Hawaiian sunset, and on Friday nights the Hilton fireworks burst over the water like a gift just for you. This is the spirit of aloha — and it's waiting to welcome you home.</p>
+  </div>
+</section>
+
+<!-- FEATURE STRIP -->
+<section class="alt" style="padding-top:60px;padding-bottom:60px">
+  <div class="wrap">
+    <div class="features">
+      <div class="feature"><div class="ic">🌊</div><h3>180° Ocean Views</h3><p>From every room</p></div>
+      <div class="feature"><div class="ic">🎆</div><h3>Friday Fireworks</h3><p>Over the lagoon, from your lanai</p></div>
+      <div class="feature"><div class="ic">🔑</div><h3>Easy Self Check-In</h3><p>Keypad entry, no front desk</p></div>
+      <div class="feature"><div class="ic">🏖️</div><h3>Beachfront</h3><p>5 minutes to the sand</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Gallery</span>
+      <h2>Step inside our hale</h2>
+      <p>Newly renovated and lovingly filled with authentic Hawaiian artwork and handcrafted Koa wood furniture — a true taste of the islands.</p>
+    </div>
+    <div class="gallery" id="galleryGrid">
+      <div class="cell tall" data-full="Photos/Front%20view.webp"><img src="Photos/Front%20view.webp" alt="Front oceanfront view"><div class="cap">The view from your lanai</div></div>
+      <div class="cell" data-full="Photos/livingroom1.webp"><img src="Photos/livingroom1.webp" alt="Living room"><div class="cap">Living room</div></div>
+      <div class="cell" data-full="Photos/Fireworks.webp"><img src="Photos/Fireworks.webp" alt="Friday night fireworks over the lagoon"><div class="cap">Friday night fireworks</div></div>
+      <div class="cell" data-full="Photos/Bedroom1.webp"><img src="Photos/Bedroom1.webp" alt="Bedroom"><div class="cap">Bedroom · queen bed</div></div>
+      <div class="cell" data-full="Photos/kitchen5.webp"><img src="Photos/kitchen5.webp" alt="Full kitchen"><div class="cap">Full kitchen</div></div>
+      <div class="cell" data-full="Photos/livingroom3.webp"><img src="Photos/livingroom3.webp" alt="Living room view"><div class="cap">Ocean from the sofa</div></div>
+      <div class="cell" data-full="Photos/dining2.webp"><img src="Photos/dining2.webp" alt="Dining area"><div class="cap">Dining area</div></div>
+      <div class="cell" data-full="Photos/Bedroom3.webp"><img src="Photos/Bedroom3.webp" alt="Bedroom detail"><div class="cap">Restful & bright</div></div>
+      <div class="cell" data-full="Photos/balcony2.webp"><img src="Photos/balcony2.webp" alt="Lanai"><div class="cap">Private lanai</div></div>
+      <div class="cell" data-full="Photos/bathroom2.webp"><img src="Photos/bathroom2.webp" alt="Bathroom"><div class="cap">Bathroom</div></div>
+      <div class="cell" data-full="Photos/Painting.webp"><img src="Photos/Painting.webp" alt="Authentic Hawaiian artwork"><div class="cap">Local Hawaiian art</div></div>
+      <div class="cell" data-full="Photos/livingroom4.webp"><img src="Photos/livingroom4.webp" alt="Living space"><div class="cap">Koa wood furnishings</div></div>
+      <div class="cell" data-full="Photos/balcony1.jpg.webp"><img src="Photos/balcony1.jpg.webp" alt="Lanai with ocean view"><div class="cap">Sunset from the lanai</div></div>
+      <div class="cell" data-full="Photos/Bedroom5.webp"><img src="Photos/Bedroom5.webp" alt="Bedroom"><div class="cap">Bedroom</div></div>
+      <div class="cell" data-full="Photos/kitchen2.webp"><img src="Photos/kitchen2.webp" alt="Kitchen detail"><div class="cap">Fully stocked kitchen</div></div>
+      <div class="cell" data-full="Photos/bathroom1.webp"><img src="Photos/bathroom1.webp" alt="Bathroom"><div class="cap">Bathroom</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE SPACE -->
+<section id="space" class="alt">
+  <div class="wrap split">
+    <img src="Photos/Kitchen1.webp" alt="Granite kitchen">
+    <div>
+      <span class="eyebrow">The Space</span>
+      <h2>Your home away from home</h2>
+      <p>This is no cookie-cutter hotel room — it's a hale with heart. Newly renovated and thoughtfully appointed, Hale ʻIke Ilikai welcomes you with a full kitchen of granite countertops and new cabinetry, stocked with everything you need to cook a meal and gather your ʻohana around the table.</p>
+      <p>Everywhere you look, the islands shine through: authentic Hawaiian artwork and handcrafted Koa wood furniture, made with care by a local Hawaiian artist. It's a sense of place — and a sense of welcome — you simply won't find in a standard rental.</p>
+      <p>The condo comfortably sleeps four: a queen bed in the bedroom and a sofa bed in the living room, with one full bath. Fast WiFi keeps you connected — though with a view like this, you may forget to check your phone.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The Location</span>
+      <h2>The heart of Waikiki at your doorstep</h2>
+      <p>The Ilikai Marina is one of Waikiki's most prized and secure addresses — toes-in-the-sand close to the beach, with a private elevated walkway leading straight to The Modern's waterfront restaurant and cocktail lounge. You'll even have direct views of the world-renowned South Shore surf breaks — Ala Moana Bowls ("Bowls") and Kaisers — right from your windows. Everything you came to Hawaiʻi for is just steps away.</p>
+    </div>
+    <div class="cols">
+      <div class="card">
+        <h3>Things to do nearby</h3>
+        <ul class="clean">
+          <li><b>World-renowned surf breaks in view</b> — watch the surfers carve Ala Moana Bowls ("Bowls") and Kaisers right from your lanai</li>
+          <li><b>Hilton Hawaiian Village Lagoon</b> — calm, protected water for swimming, just steps away</li>
+          <li><b>Waikiki Beach</b> — world-famous sand and surf, ~5-minute walk</li>
+          <li><b>Ala Moana Center</b> — one of the world's largest open-air malls</li>
+          <li><b>Hawaii Convention Center</b> — an easy walk from your door</li>
+          <li><b>Saturday morning farmers' market</b> — local produce, coffee, and treats</li>
+          <li><b>The Modern</b> — excellent dining right next door</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Getting here</h3>
+        <ul class="clean">
+          <li>About a <b>15–20 minute drive</b> from Honolulu International Airport (HNL)</li>
+          <li>The <b>airport express bus</b> drops off right out front of the Ilikai</li>
+          <li><b>On-site parking</b> under the building, $35/day, subject to availability</li>
+          <li>Convenience stores across the street and next door at the Ilikai Hotel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEW BAND -->
+<section id="reviews" class="review-band">
+  <div class="wrap">
+    <div class="big">4.76 ★</div>
+    <div class="sub">152 five-star stays</div>
+    <p style="max-width:640px;margin:26px auto 0;color:#d7e8ec;font-weight:300">Our guests feel the aloha — returning again and again for the view, the location, the warm welcome, and the value. We'd love to share it with you, too.</p>
+    <div class="themes">
+      <span>Stunning views</span><span>Walkable location</span><span>Spotless</span><span>Great communication</span><span>Excellent value</span><span>Easy check-in</span>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES + GOOD TO KNOW -->
+<section class="alt">
+  <div class="wrap cols">
+    <div class="card">
+      <h3>Comforts &amp; amenities</h3>
+      <ul class="clean">
+        <li>Full kitchen with granite counters, fully equipped</li>
+        <li>Fast WiFi</li>
+        <li>Beachfront location with beach access</li>
+        <li>Private lanai with sweeping ocean &amp; harbor views</li>
+        <li>Keypad self check-in</li>
+        <li>Coin-operated laundry on the 8th floor</li>
+        <li>On-site parking ($35/day, subject to availability)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Good to know</h3>
+      <ul class="clean">
+        <li><b>Check-in</b> after 3:00 PM · <b>checkout</b> by 11:00 AM</li>
+        <li>Self-service condo — no daily housekeeping; extra cleaning available for a fee</li>
+        <li>Access details sent within 24 hours of arrival, for your security</li>
+        <li>Sleeps 4 · No smoking · No pets · No parties</li>
+        <li><b>Cancellation:</b> full refund if you cancel within 24 hours of booking</li>
+        <li>For liability reasons, we can't receive mail or packages</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- AVAILABILITY -->
+<section id="availability" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Availability</span>
+      <h2>Check your dates</h2>
+      <p>Booked nights sync automatically from our live calendar. See an open stretch? Send an inquiry below and we'll hold it for you.</p>
+    </div>
+    <div class="cal-wrap">
+      <div class="cal-head">
+        <button id="calPrev" aria-label="Previous month">‹</button>
+        <div id="calTitle"></div>
+        <button id="calNext" aria-label="Next month">›</button>
+      </div>
+      <div class="cal-dow"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+      <div class="cal-grid" id="calGrid"></div>
+      <div class="cal-legend">
+        <span><i class="dot avail"></i>Available</span>
+        <span><i class="dot booked"></i>Booked</span>
+      </div>
+      <div id="calNote" class="cal-note"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-aside">
+      <span class="eyebrow">Reserve Your Stay</span>
+      <h2>Aloha — let's find your dates</h2>
+      <p>Ready to trade your to-do list for trade winds? Send us a note with your travel dates and number of guests, and we'll help you plan a stay you'll be dreaming about long after you've gone home. We typically reply within a day.</p>
+      <p>Email us directly at<br><a class="email" href="mailto:info@haleikeilikai.com">info@haleikeilikai.com</a></p>
+      <p style="font-size:.92rem">Mahalo for considering Hale ʻIke Ilikai — we can't wait to welcome you. <b>Save the fees by booking directly with us</b> — but if you'd prefer to book through Airbnb, you'll find us there with 150+ five-star stays.</p>
+      <a href="https://www.airbnb.com/rooms/17288601" target="_blank" rel="noopener" class="btn-sm">View our Airbnb listing →</a>
+    </div>
+    <form id="inquiryForm" onsubmit="return sendInquiry(event)">
+      <label for="name">Your name</label>
+      <input id="name" type="text" required>
+      <label for="email">Your email</label>
+      <input id="email" type="email" required>
+      <label for="dates">Travel dates</label>
+      <input id="dates" type="text" placeholder="e.g. Aug 12 – 19, 2026">
+      <label for="guests">Number of guests</label>
+      <input id="guests" type="text" placeholder="2 adults">
+      <label for="msg">Message</label>
+      <textarea id="msg" placeholder="Tell us about your trip or any questions…"></textarea>
+      <button type="submit" class="btn">Send Inquiry</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <span class="brand">Hale ʻIke Ilikai</span>
+  Oceanfront at the Ilikai Marina · Waikiki, Honolulu, Hawaiʻi<br>
+  <a href="mailto:info@haleikeilikai.com" style="color:#cfe0e5">info@haleikeilikai.com</a>
+  <div style="margin-top:14px;font-style:italic;color:#9fc0c9;font-family:'Cormorant Garamond',serif;font-size:1.05rem">A hui hou — until we meet again. Made with aloha. 🌺</div>
+  <div class="reg">State of Hawaii Registration: TA-066-920-8576-01 · 260100020193 · 1594</div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" style="display:none;position:fixed;inset:0;z-index:200;background:rgba(6,28,35,.92);align-items:center;justify-content:center;cursor:zoom-out;padding:24px">
+  <img id="lightboxImg" src="" alt="" style="max-width:94%;max-height:92%;width:auto;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.5)">
+</div>
+
+<script>
+  // Lightbox
+  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lightboxImg');
+  document.querySelectorAll('#galleryGrid .cell').forEach(function(c){
+    c.addEventListener('click',function(){
+      lbImg.src=c.getAttribute('data-full');
+      lb.style.display='flex';
+    });
+  });
+  lb.addEventListener('click',function(){lb.style.display='none';lbImg.src='';});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){lb.style.display='none';}});
+
+  /* ===== AVAILABILITY CALENDAR =====
+     Paste your Cloudflare Worker URL (which proxies your Airbnb iCal export) below.
+     Leave blank to show the "send an inquiry" fallback. See availability-setup.md. */
+  var ICAL_PROXY_URL = "";
+
+  var booked = new Set();
+  var viewDate = new Date(); viewDate.setDate(1); viewDate.setHours(0,0,0,0);
+  var thisMonth = new Date(); thisMonth.setDate(1); thisMonth.setHours(0,0,0,0);
+
+  function ymd(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+
+  function parseICS(text){
+    var lines = text.replace(/\r\n[ \t]/g,'').replace(/\n[ \t]/g,'').split(/\r?\n/);
+    var start=null,end=null;
+    for(var i=0;i<lines.length;i++){
+      var line=lines[i];
+      if(line.indexOf('BEGIN:VEVENT')===0){start=null;end=null;}
+      else if(line.indexOf('DTSTART')===0){start=line.split(':').pop().slice(0,8);}
+      else if(line.indexOf('DTEND')===0){end=line.split(':').pop().slice(0,8);}
+      else if(line.indexOf('END:VEVENT')===0&&start&&end){
+        var sd=new Date(+start.slice(0,4),+start.slice(4,6)-1,+start.slice(6,8));
+        var ed=new Date(+end.slice(0,4),+end.slice(4,6)-1,+end.slice(6,8));
+        for(var d=new Date(sd); d<ed; d.setDate(d.getDate()+1)){ booked.add(ymd(d)); }
+      }
+    }
+  }
+
+  function renderCal(){
+    var grid=document.getElementById('calGrid'); grid.innerHTML='';
+    var y=viewDate.getFullYear(), m=viewDate.getMonth();
+    document.getElementById('calTitle').textContent=viewDate.toLocaleString('en-US',{month:'long',year:'numeric'});
+    document.getElementById('calPrev').disabled = (viewDate<=thisMonth);
+    var first=new Date(y,m,1).getDay();
+    var days=new Date(y,m+1,0).getDate();
+    var today=new Date(); today.setHours(0,0,0,0);
+    for(var i=0;i<first;i++){var c=document.createElement('div');c.className='cal-cell empty';grid.appendChild(c);}
+    for(var day=1;day<=days;day++){
+      var d=new Date(y,m,day);
+      var cell=document.createElement('div'); cell.className='cal-cell'; cell.textContent=day;
+      if(d<today){cell.classList.add('past');}
+      else if(booked.has(ymd(d))){cell.classList.add('booked');}
+      else{cell.classList.add('avail');}
+      grid.appendChild(cell);
+    }
+  }
+
+  document.getElementById('calPrev').addEventListener('click',function(){
+    if(viewDate>thisMonth){viewDate.setMonth(viewDate.getMonth()-1);renderCal();}
+  });
+  document.getElementById('calNext').addEventListener('click',function(){
+    viewDate.setMonth(viewDate.getMonth()+1);renderCal();
+  });
+
+  (function loadCal(){
+    var note=document.getElementById('calNote');
+    if(!ICAL_PROXY_URL){
+      note.innerHTML='Live calendar isn\'t connected yet — <a href="#contact">send an inquiry</a> and we\'ll confirm your dates right away.';
+      renderCal(); return;
+    }
+    fetch(ICAL_PROXY_URL,{cache:'no-store'})
+      .then(function(r){if(!r.ok)throw 0;return r.text();})
+      .then(function(t){parseICS(t);note.textContent='Booked nights shown are synced from our live calendar.';renderCal();})
+      .catch(function(){note.innerHTML='We couldn\'t load live availability just now — <a href="#contact">send an inquiry</a> and we\'ll confirm your dates.';renderCal();});
+  })();
+
+  // Inquiry form -> mailto
+  function sendInquiry(e){
+    e.preventDefault();
+    var n=document.getElementById('name').value,
+        em=document.getElementById('email').value,
+        d=document.getElementById('dates').value,
+        g=document.getElementById('guests').value,
+        m=document.getElementById('msg').value;
+    var subject='Reservation inquiry — Hale ʻIke Ilikai';
+    var body='Name: '+n+'\nEmail: '+em+'\nDates: '+d+'\nGuests: '+g+'\n\n'+m;
+    window.location.href='mailto:info@haleikeilikai.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    return false;
+  }
+</script>
+</body>
+</html>
